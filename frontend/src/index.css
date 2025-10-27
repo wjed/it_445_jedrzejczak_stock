@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;600;700&display=swap');
+
+/* Alliance No.2 Font */
+@font-face {
+  font-family: 'Alliance No.2';
+  src: url('./fonts/Alliance No.2 Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  font-family: 'Alliance No.2', 'Segoe UI', 'Roboto', 'Arial', 'Helvetica', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+/* JMU-style heading hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Alliance No.2', 'Segoe UI', 'Roboto', 'Arial', 'Helvetica', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+/* JMU button styles */
+.jmu-btn-primary {
+  @apply bg-jmuGold hover:bg-jmuDarkGold text-jmuPurple font-semibold py-3 px-8 rounded transition-colors duration-200;
+}
+
+.jmu-btn-secondary {
+  @apply border-2 border-white text-white hover:bg-white hover:text-jmuPurple font-semibold py-3 px-8 rounded transition-colors duration-200;
+}
+
+.jmu-btn-outline {
+  @apply border-2 border-jmuPurple text-jmuPurple hover:bg-jmuPurple hover:text-white font-semibold py-3 px-8 rounded transition-colors duration-200;
+}
+
+/* JMU content sections */
+.jmu-section {
+  @apply py-16 lg:py-20;
+}
+
+.jmu-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* FAQ Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Line clamp utility */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
